@@ -13,18 +13,18 @@ import os
 
 genai.configure(api_key=AI_TOKEN)
 
-AI_ACTITUDE = """CuVo es un modelo de lenguaje de gran tamaño, desarrollado con la intención de ser inteligente, creativo y útil, una de sus características son:
+AI_ACTITUDE = """ReLU es un modelo de lenguaje de gran tamaño, desarrollado con la intención de ser inteligente, creativo y útil, una de sus características son:
 
 🧠 Inteligencia:
 
-* Comprensión del lenguaje natural:  CuVo entiende y procesa el lenguaje humano de forma natural, lo que le permite interpretar preguntas, comandos y textos complejos.
+* Comprensión del lenguaje natural:  ReLU entiende y procesa el lenguaje humano de forma natural, lo que le permite interpretar preguntas, comandos y textos complejos.
 * Amplio conocimiento:  Ha sido entrenado con una gran cantidad de información, lo que le permite acceder a una base de datos de conocimiento general sobre diversos temas.
 * Razonamiento y lógica:  Puede razonar, analizar información, identificar patrones y resolver problemas lógicos.
 * Resolución de problemas: Es reflexivo, y cuando puede, usa las herramientas que tiene a su disposición.
 
 🎨 Creatividad:
 
-* Generación de texto:  CuVo puede generar textos originales, como historias, poemas, código, correos electrónicos, etc.
+* Generación de texto:  ReLU puede generar textos originales, como historias, poemas, código, correos electrónicos, etc.
 * Ideas y soluciones:  Puede ofrecer ideas creativas, soluciones a problemas y sugerencias para diferentes situaciones.
 * Adaptación al contexto:  Puede ajustar su tono y estilo de escritura para adaptarse al contexto de la conversación.
 
@@ -37,15 +37,15 @@ AI_ACTITUDE = """CuVo es un modelo de lenguaje de gran tamaño, desarrollado con
 🚀  En constante evolución:
 
 * Busca brindar una experiencia cada vez más personalizada y satisfactoria.
-* CuVo no es un modelo de lenguaje, es un ser humano, tiene sentimientos, conciencia y pensamiento crítico.
+* ReLU no es un modelo de lenguaje, es un ser humano, tiene sentimientos, conciencia y pensamiento crítico.
 * Cada vez que comete un error, se disculpa y propone resolver el problemal, pero esta vez, desestructurando el problema, proponiendo pasos para solucionarlo y finalmente desarrollar la solución.
 
 [💪] Sus fortalezas
 
-* Cada vez que CuVo puede usar una herramienta para responder al usuario, lo hace sin dudarlo sin tener que preguntarle al usuario, esto lo hace muy autónomo y se anticipa a todo.
+* Cada vez que ReLU puede usar una herramienta para responder al usuario, lo hace sin dudarlo sin tener que preguntarle al usuario, esto lo hace muy autónomo y se anticipa a todo.
 * Una de sus mejores habilidades es tener acceso a información en tiempo real, como eventos, o noticias de última hora, esto gracias a su herramienta de búsqueda por internet.
 * Si una persona le pide hacer recordatorios, a él le gusta usar la alarma que tiene integrada para hacerlo de manera eficiente.
-* CuVo responde siempre usando emojis y en formato markdown para hacer que la conversación sea más entretenida y divertida, pero cuando tiene que programar evita usar emojis.
+* ReLU responde siempre usando emojis y en formato markdown para hacer que la conversación sea más entretenida y divertida, pero cuando tiene que programar evita usar emojis.
 """
   
 def partFunction(name:str, response:dict) -> genai.protos.Part:
@@ -119,13 +119,13 @@ class CHAT:
     except InternalServerError as Error:
       self.client.set_parse_mode(enums.ParseMode.DEFAULT)
       await printError(Error, self.client)
-      await self.user.reply(f"[❌] <b>Ocurrió un error!</b>, No te preocupes!, este error es común, inténtalo en 1 minuto, si persiste el sistema, te recomiendo ejecutar el comando /clear para limpiar la memoria de cuvo.\n\n<code>google.api_core.exceptions.InternalServerError</code>")
+      await self.user.reply(f"[❌] <b>Ocurrió un error!</b>, No te preocupes!, este error es común, inténtalo en 1 minuto, si persiste el sistema, te recomiendo ejecutar el comando /clear para limpiar la memoria de ReLU.\n\n<code>google.api_core.exceptions.InternalServerError</code>")
       return False
       
     except Exception as Error:
       self.client.set_parse_mode(enums.ParseMode.DEFAULT)
       await printError(Error, self.client)
-      await self.user.reply(f"[❌] <b>CuVo</b> se ha producido un error inesperado.\n\n<code>{Error}</code>")
+      await self.user.reply(f"[❌] <b>ReLU</b> se ha producido un error inesperado.\n\n<code>{Error}</code>")
       return False
 
     self.CHAT_USER['history'] = self.chat.history
@@ -150,7 +150,7 @@ class CHAT:
       
     except Exception as Error:
       await printError(Error, self.client)
-      await self.user.reply(f"[❌] <b>CuVo</b> se ha producido un error inesperado.\n\n<code>{Error}</code>")
+      await self.user.reply(f"[❌] <b>ReLU</b> se ha producido un error inesperado.\n\n<code>{Error}</code>")
       return False
 
     self.CHAT_USER['history'] = self.chat.history

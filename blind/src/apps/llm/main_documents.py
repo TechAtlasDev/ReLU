@@ -7,7 +7,7 @@ from pyrogram import enums
 from blind.src.utils.utilities import upload_to_gemini, clearComand, downloadMedia, printTest
 import os
 
-@Client.on_message(filters.document & (filters.command("cuvo") | filters.private))
+@Client.on_message(filters.document & (filters.command("relu") | filters.private))
 async def main_documents(client: Client, message: Message):
   await client.send_chat_action(message.chat.id, enums.ChatAction.TYPING)
 

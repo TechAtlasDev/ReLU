@@ -9,7 +9,7 @@ from blind.src.utils.utilities import upload_to_gemini, clearComand, downloadMed
 from blind.src.utils.buttons import keymakers
 import os
 
-@Client.on_message(filters.photo & (filters.command("cuvo") | filters.private))
+@Client.on_message(filters.photo & (filters.command("relu") | filters.private))
 async def main_images(client: Client, message: Message):
   await client.send_chat_action(message.chat.id, enums.ChatAction.TYPING)
 
